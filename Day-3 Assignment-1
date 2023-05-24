@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main() {
+	int i, j, k;
+	
+	int a[] = {1,2,3};
+	int size_a = sizeof(a) / sizeof(a[0]);
+	
+	int b[] = {10,20,30};
+	int size_b = sizeof(b) / sizeof(b[0]);
+	
+	int c[size_a + size_b];
+	
+	for(i = 0; i < size_b; i++) {
+		c[i] = a[i];
+	}
+	
+	for(j = 0; j < size_b; j++) {
+		c[i] = b[j];
+		i++;
+	}
+	
+	for(k = 0; k < size_a + size_b; k++) {
+		printf("%d ",c[k]);
+	}
+	
+	return 0;
+}
