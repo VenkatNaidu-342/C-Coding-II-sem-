@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<ctype.h>
+int main() {
+	char str[100];
+	int i, lwr = 0, spl = 0;
+	gets(str);
+	i = 0;
+	while(str[i] != '\0') {
+		if(islower(str[i])) {
+			lwr++;
+		} else if (!islower(str[i]) && !isupper(str[i]) && str[i] != ' ' && !isdigit(str[i])) {
+			spl++;
+		}
+		i++;
+	}
+	printf("\nSpecial Characters : %d\n",spl);
+	printf("Lower case Letters : %d\n",lwr);
+	return 0;
+}
