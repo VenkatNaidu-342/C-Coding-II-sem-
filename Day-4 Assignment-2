@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<string.h>
+int main() {
+	char str[100];
+	gets(str);
+	printf("\nOriginal String : %s\n",str);
+	strrev(str);
+	printf("\nReversed String : %s\n",str);
+	return 0;
+}
