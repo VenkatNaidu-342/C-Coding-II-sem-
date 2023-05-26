@@ -10,7 +10,7 @@ int main() {
 	
 	int c[size_a + size_b];
 	
-	for(i = 0; i < size_b; i++) {
+	for(i = 0; i < size_a; i++) {
 		c[i] = a[i];
 	}
 	
