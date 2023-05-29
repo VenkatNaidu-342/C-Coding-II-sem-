@@ -26,7 +26,7 @@ int main() {
     int y = x / sizeof(int);
     printf("\n\n%d  %d\n\n", x, y);
     
-    scanf("%d", &pos); // 0-5
+    scanf("%d", &pos);
     
     deleteElement(arr, len, pos);
     
