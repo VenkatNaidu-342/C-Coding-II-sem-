@@ -1,0 +1,28 @@
+#include<stdio.h>
+main() {
+	void binary_search(int[],int,int);
+	int arr[] = {1,2,3,4,5,6,7,8,9,10};
+	int len = sizeof(arr) / sizeof(int);
+	int n;
+	scanf("%d",&n);
+	binary_search(arr,len,n);
+}
+void binary_search(int arr[],int len,int n) {
+	int sind = 0, eind = len - 1, mid;
+	int flag = 0;
+	while(sind <= eind) {
+		mid = (sind + eind) / 2;
+		if(arr[mid] == n) {
+			printf("\nLocation = %d\n", mid);
+			flag = 1;
+			break;
+		} else if(arr[mid] < n) {
+			sind = mid + 1;
+		} else {
+			eind = mid - 1;
+		}
+	}
+	if(!flag){
+		printf("\nElement Not Found!\n");	
+	}
+}
