@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main() {
+	void bubble_sort(int[],int);
+  	int i,j,t;
+  	int arr[] = {64, 34, 25, 12, 22, 11, 90};
+	int len = sizeof(arr) / sizeof(arr[0]);
+	void bubble_sort(int[],int);
+	bubble_sort(arr,len);
+	printf("After sorting elements:\n");
+	for(i=0;i<len;i++) {
+		printf("%d ",arr[i]);
+	}
+    
+}
+void bubble_sort(int arr[],int len) {
+	int i,j,t;
+	for(i = 0; i < len; i++) {
+    for(j = i + 1; j < len; j++) {
+      if(arr[i] > arr[j]) {
+        t = arr[i];
+        arr[i] = arr[j];
+        arr[j] = t;
+      }
+    }
+  }
+}
